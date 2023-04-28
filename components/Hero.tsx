@@ -3,23 +3,22 @@ import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import { motion } from "framer-motion";
-
+import logo from '/images/fis.png';
 
 type Props = {}
 
 export default function Hero({}: Props) {
     const [text, count] = useTypewriter({
         words: [
-
             "Hi, The name's Faisal AL Sofyani",
             "Guy-who-loves-Coffee.tsx",
             "<ButLovesToCodeMore />",
         ],
         loop: true,
         delaySpeed: 2000,
-    })
+    });
 
-  return (
+    return (
     <div className='h-screen flex flex-col space-y-8 item-center justify-center
     text-center overflow-hidden'>
         <BackgroundCircles />
@@ -30,8 +29,7 @@ export default function Hero({}: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2eBS-Fbb5zt-h0_3XuAVS4qNMJR09WrtfQ&usqp=CAU'
-        alt=''/>
+        src={ logo }/>
         <motion.div
         initial={{x: -200, opacity: 0,}}
         transition={{ duration: 1.2 }}
@@ -61,5 +59,5 @@ export default function Hero({}: Props) {
         </Link>
     </motion.div>
 </div>
-  )
+    )
 }
