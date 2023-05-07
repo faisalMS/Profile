@@ -3,7 +3,7 @@ import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import { motion } from "framer-motion";
-import logo from '/images/fis.png';
+
 
 type Props = {}
 
@@ -29,7 +29,7 @@ export default function Hero({}: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={ logo }/>
+        src="Faisal_picture.JPG"/>
         <motion.div
         initial={{x: -200, opacity: 0,}}
         transition={{ duration: 1.2 }}
